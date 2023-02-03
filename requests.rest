@@ -1,0 +1,37 @@
+
+POST http://localhost:3000/login 
+Content-Type: application/json
+
+{
+    "name" : "Sridhar"
+}
+
+###
+GET http://localhost:8080/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3JpZGhhciIsImlhdCI6MTY2Mzc2OTkyNiwiZXhwIjoxNjYzNzY5OTg2fQ.NMRrWHUSrs9nb6oISqEw_Rm07S68JnUSk24GrfO9SZU
+
+###
+
+POST http://localhost:3000/token
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS2FydGhpayIsImlhdCI6MTY1MjI2NTI0OX0.iYn7ChGy_vn-DmMZyDihOgAy5T_I3Yi0fjsx-qQk5-g"
+}
+
+###
+
+DELETE http://localhost:3000/logout
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS2FydGhpayIsImlhdCI6MTY1MjI2NTI0OX0.iYn7ChGy_vn-DmMZyDihOgAy5T_I3Yi0fjsx-qQk5-g" 
+}
+
+###
+
+GET http://localhost:8080/cars
+
+###
+
+DELETE http://localhost:8080/cars/BMW
